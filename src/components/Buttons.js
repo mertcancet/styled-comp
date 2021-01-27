@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const replaceProps = (string) => {
   const modifiedString = string
     .replace('primary', '#007bff')
@@ -42,6 +41,10 @@ const MyButtons = (props) => {
       {props.variant} {props.children}
     </Button>
   );
+};
+
+MyButtons.defaultProps = {
+  variant: 'primary',
 };
 
 export default MyButtons;

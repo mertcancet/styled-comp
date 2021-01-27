@@ -30,6 +30,9 @@ function App() {
           <MyButton variant='secondary' block>
             Block{' '}
           </MyButton>
+          <MyButton>selam</MyButton>
+          <MyButton>selam</MyButton>
+          <MyButton>selam</MyButton>
         </Block>
       </Content>
     </Wrapper>
