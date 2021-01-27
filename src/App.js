@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
+import styled from 'styled-components';
+import MyButton from './components/Buttons';
+const Wrapper = styled.div`
+  height: 100vh;
+  background-color: #f0f8fe;
+`;
+const Content = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Block = styled.div`
+  flex: 1 0 100%;
+`;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Content>
+        <Block>
+          <MyButton variant='primary' />
+          <MyButton variant='primary' block>
+            {' '}
+            Block
+          </MyButton>
+          <MyButton variant='secondary' />
+          <MyButton variant='secondary' block>
+            Block{' '}
+          </MyButton>
+          <MyButton variant='success' />
+          <MyButton variant='secondary' block>
+            Block{' '}
+          </MyButton>
+        </Block>
+      </Content>
+    </Wrapper>
   );
 }
 
