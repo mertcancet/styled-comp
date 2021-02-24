@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const replaceProps = (string) => {
   const modifiedString = string
     .replace('primary', '#007bff')
@@ -10,7 +11,7 @@ const replaceProps = (string) => {
 };
 
 const Button = styled.button`
-  margin: 5px;
+  margin: 1% 4%;
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -24,7 +25,7 @@ const Button = styled.button`
   border-radius: 0.25rem;
   color: #fff;
 
-  width: ${(props) => props.block && '98%'};
+  width: ${(props) => props.block && '92%'};
   background-color: ${(props) => props.variant};
   border-color: ${(props) => props.variant};
 
@@ -34,11 +35,9 @@ const Button = styled.button`
 
 const MyButtons = (props) => {
   const modProps = replaceProps(props.variant);
-  console.log({ modProps });
-  console.log(props.block);
   return (
     <Button variant={modProps} block={props.block}>
-      {props.variant} {props.children}
+      {props.children}
     </Button>
   );
 };
